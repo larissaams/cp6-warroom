@@ -10,17 +10,23 @@
 
 **Grupo (nome da equipe plantonista):** ______________________________________
 
-**Turma:** ____________ **Repo:** `cp6-warroom-____________________`
+**Turma:** 2CCPG **Repo:** `cp6-warroom-____________________`
 
 **Integrantes (nome + RM):**
 
 | Nome | RM |
-|---|---|
-| | |
-| | |
-| | |
-| | |
-| | |
+
+|Larissa|564168|
+
+|Anny|565055|
+
+|Raira|564850|
+
+|Sofia|562767|
+
+|Ana|563171|
+
+|Gisleine|563804|
 
 ## 0. Setup do repositório (antes da 1ª aula; podem apagar esta seção depois)
 
@@ -107,10 +113,48 @@ segurança × faturamento × dívida). "Porque é mais seguro" não é justifica
 Uma linha por decisão registrada acima (usem os títulos ditados em aula):
 
 | # | Decisão | Nossa letra | Consequência que ELA teria tido |
-|---|---|---|---|
+
+|---|---|D|---|
+
+🔥 -1  | 💰 15  | 🧹 +2| 
+
 | | | | |
+
 | | | | |
+
+
+| # | Decisão | Nossa letra | Consequência que ELA teria tido |
+
+|---|---|B|---|
+
+🔥 0  | 💰 15  | 🧹 1| 
+
 | | | | |
+
+| | | | |
+
+
+| # | Decisão | Nossa letra | Consequência que ELA teria tido |
+
+|---|---|D|---|
+
+🔥 0  | 💰 15  | 🧹 1| 
+
+| | | | |
+
+| | | | |
+
+
+| # | Decisão | Nossa letra | Consequência que ELA teria tido |
+
+|---|---|D|---|
+
+🔥 -1  | 💰 15  | 🧹 +2| 
+
+| | | | |
+
+| | | | |
+
 
 *(adicionem linhas conforme as decisões da madrugada)*
 
