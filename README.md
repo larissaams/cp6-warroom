@@ -112,51 +112,124 @@ segurança × faturamento × dívida). "Porque é mais seguro" não é justifica
 
 Uma linha por decisão registrada acima (usem os títulos ditados em aula):
 
-| # | Decisão | Nossa letra | Consequência que ELA teria tido |
 
-|---|---|D|---|
+## O saldo que virou negativo  
+ 
+**Tipo:** rodada 1 · **Voto:**  A 
+ 
+**Justificativa:**  
+ 
+Escolhemos o rollback para voltar à versão de terça-feira e evitar novas transferências sem saldo suficiente. Assim, reduzimos o risco de prejuízos, mas podemos perder correções recentes. 
+ 
+**Placar do grupo após esta decisão:** 🔥 -1 · 💰 15 mil · 🧹 +2 
+ 
 
-🔥 -1  | 💰 15  | 🧹 +2| 
-
-| | | | |
-
-| | | | |
-
-
-| # | Decisão | Nossa letra | Consequência que ELA teria tido |
-
-|---|---|B|---|
-
-🔥 0  | 💰 15  | 🧹 1| 
-
-| | | | |
-
-| | | | |
+ 
+## A busca que não acha ninguém  
 
 
-| # | Decisão | Nossa letra | Consequência que ELA teria tido |
 
-|---|---|D|---|
-
-🔥 0  | 💰 15  | 🧹 1| 
-
-| | | | |
-
-| | | | |
+**Tipo**: relâmpago · **Voto:**  B  
 
 
-| # | Decisão | Nossa letra | Consequência que ELA teria tido |
+**Justificativa:** 
 
-|---|---|D|---|
-
-🔥 -1  | 💰 15  | 🧹 +2| 
-
-| | | | |
-
-| | | | |
+Escolhemos usar a query findByTitular do repository, pois ela já está pronta e evita erros na busca por nome. Assim, aproveitamos uma solução existente e deixamos o código mais organizado  
 
 
-*(adicionem linhas conforme as decisões da madrugada)*
+**Placar do grupo após esta decisão:**  🔥 -1 · 💰 15 mil · 🧹 +1 
+ 
+
+
+## A injeção que derreteu o banco 
+
+
+**Tipo:** rodada 2 · **Voto:**  D 
+
+
+**Justificativa:** 
+
+Escolhemos usar a findByTitular do repository, pois ela já está pronta e evita a montagem manual de SQL. Assim, reduzimos o risco de injeção de SQL e deixamos o código mais seguro e organizado. 
+
+
+**Placar do grupo após esta decisão:**  🔥 -1 · 💰 15 mil · 🧹 0
+
+## A noite das contas gêmeas  
+
+**Tipo:** rodada 3 · **Voto:**  D 
+
+**Justificativa:** 
+
+
+Escolhemos delegar a numeração ao banco de dados, que garante a geração de números únicos. Assim, evitamos contas duplicadas e reduzimos o risco de problemas em auditorias. 
+
+**Placar do grupo após esta decisão:**  🔥 -1 · 💰 25 mil · 🧹 0 
+
+
+## O comprovante que aponta pra pessoa errada 
+
+
+**Tipo:** rodada 4 · **Voto:** A 
+
+**Justificativa:** 
+
+Escolhemos corrigir a gravação do extrato para que os dados das transferências futuras fiquem corretos. Porém, os históricos antigos continuarão errados, evitando um retrabalho imediato. 
+
+**Placar do grupo após esta decisão:**  🔥 0 · 💰 40 mil · 🧹 1 
+
+## A fábrica que devolve null 
+
+  
+
+**Tipo:** rodada 5 · **Voto:** A 
+
+**Justificativa:** 
+
+Escolhemos lançar uma exceção clara na factory quando o tipo de conta for inválido. Assim, identificamos o erro rapidamente e evitamos falhas difíceis de entender no repository. 
+
+**Placar do grupo após esta decisão:**  🔥 -1 · 💰 40 mil · 🧹 1 
+
+
+## O teste vermelho às 03h45 
+
+**Tipo:** rodada 6 · **Voto:** D 
+
+**Justificativa:** 
+
+Escolhemos ajustar o teste para refletir o comportamento atual do código e conseguir realizar o deploy dentro do prazo. Porém, isso pode esconder um erro, já que o contrato com o cliente define a taxa da TED como R$ 5,00. 
+
+**Placar do grupo após esta decisão:**  🔥 -1 · 💰 40 mil · 🧹 2 
+
+
+## "A taxa é 5 ou 50?" 
+  
+
+**Tipo:** relâmpago · **Voto:** C 
+  
+**Justificativa:** 
+
+Escolhemos reproduzir o problema com um teste antes de responder, para confirmar o valor correto da taxa. Assim, evitamos passar informações erradas aos clientes e à imprensa. 
+
+
+**Placar do grupo após esta decisão:**  🔥 0 · 💰 40 mil · 🧹 2 
+
+
+ 
+
+## Go/No-Go da Black Friday 
+
+  
+
+**Tipo** rodada 7 · **Voto:** B 
+
+  
+
+**Justificativa:** 
+
+Escolhemos corrigir os bugs e garantir que todos os testes passem antes de liberar a campanha. Assim, priorizamos a segurança e a qualidade do sistema, mesmo com duas horas de atraso. 
+
+**Placar do grupo após esta decisão:**  🔥 1 · 💰 80 mil · 🧹 1 
+
 
 ---
 
@@ -166,32 +239,42 @@ Uma linha por decisão registrada acima (usem os títulos ditados em aula):
 
 ## 1. Linha do tempo da madrugada
 
-_______________________________________________________________________________________
+19h12 — Rodada 1: Escolhemos o rollback para evitar novas transferências sem saldo.
 
-_______________________________________________________________________________________
+20h10 — Relampago A: Usamos a query findByTitular para corrigir a busca por nome.
 
-_______________________________________________________________________________________
+21h02 — Rodada 2: Escolhemos a query do repository para evitar injeção de SQL.
+
+22h50 — Rodada 3: Escolhemos delegar a numeração das contas ao banco de dados.
+
+00h47 — Rodada 4: Corrigimos a gravação dos extratos futuros.
+
+01h30 — Rodada 5: Escolhemos lançar uma exceção clara para tipos de conta inválidos.
+
+03h45 — Rodada 6: Ajustamos o teste para esperar R$ 50, mantendo o erro da taxa.
+
+05h58 — Relampago E: Escolhemos reproduzir o problema com um teste antes de responder à imprensa.
+
+06h15 — Rodada 7: Escolhemos corrigir os bugs e garantir que a suíte de testes estivesse verde antes de abrir a campanha.
 
 ## 2. Causa raiz de 2 incidentes (aula + mecanismo técnico)
 
-**Incidente 1:** _______________________________________________
+**Incidente 1**: Saldo negativo após transferência. 
 
-Aula/mecanismo:
+Exceção engolida (exception swallowing). O catch capturava a exceção de saldo insuficiente, mas não interrompia a operação. Dessa forma, o débito continuava mesmo sem saldo suficiente. 
 
-_______________________________________________________________________________________
+**Incidente 2**: Injeção de SQL na busca por titular. 
 
-**Incidente 2:** _______________________________________________
-
-Aula/mecanismo:
-
-_______________________________________________________________________________________
+JDBC puro e concatenação de strings na consulta SQL. O nome informado era inserido diretamente no comando, permitindo que uma entrada maliciosa alterasse a consulta e retornasse todas as contas.
 
 ## 3. O que faríamos diferente (2 rodadas + por quê)
 
-_______________________________________________________________________________________
+Rodada 1: Escolheríamos corrigir o problema e criar um teste antes de publicar, em vez de fazer rollback. Assim, evitaríamos perder correções recentes e reduziríamos o risco de bugs antigos voltarem. 
 
-_______________________________________________________________________________________
+Rodada 6: Investigaríamos a taxa incorreta antes do deploy, mesmo que perdêssemos a janela. O teste deveria continuar verificando o contrato de R$ 5, em vez de aceitar R$ 50.
 
 ## 4. A maior lição da equipe
 
-_______________________________________________________________________________________
+Aprendemos que não basta fazer o sistema funcionar rapidamente. Precisamos respeitar as regras de negócio, criar testes confiáveis e corrigir as causas dos problemas. A segurança dos clientes deve ser prioridade, mesmo quando existe pressão para entregar rápido. 
+
+Uma palavra para resumir a madrugada: Caótica
